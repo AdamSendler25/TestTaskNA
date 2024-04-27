@@ -21,7 +21,6 @@ public class WordsCount {
             return e.getMessage();
         }
         Map<String,Integer> map = new LinkedHashMap<>();
-;
         try(BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(
                 new FileInputStream(file), StandardCharsets.UTF_8))) {
             bufferedReader.lines().flatMap(string -> Arrays.stream(string.split(" "))).
